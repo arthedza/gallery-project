@@ -1,0 +1,21 @@
+{
+  "name": "gallery-project",
+  "version": "1.0.0",
+  "description": "JS course project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -p",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arthedza/gallery-project.git"
+  },
+  "author": "arthedza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arthedza/gallery-project/issues"
+  },
+  "homepage": "https://github.com/arthedza/gallery-project#readme"
+}

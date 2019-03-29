@@ -1,5 +1,12 @@
+import imageCard from "./modules/imageCard.js";
+customElements.define('image-card', imageCard);
+
 function addElement(tagName, container) {
     return (container ? container : document.body).appendChild(document.createElement(tagName));
+}
+
+function getDate() {
+    return new Date().toLocaleString()
 }
 
 function testFile(file) {
@@ -29,6 +36,7 @@ async function transport(file) {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
+                created: getDate(),
                 content: await encode(file)
             })
         })
@@ -53,9 +61,16 @@ function getImg(params) {
 }
 
 function showImg(img) {
-    return img.content ? addElement('img').src = `data:image/png;base64,${img.content}` : null; //TODO: file types
+    return img.content ? addElement('image-card').setAttribute('src', `data:image/png;base64,${img.content}`) : null //= `data:image/png;base64,${img.content}` : null; //TODO: file types
 }
 
 window.onload = function (event) {
     getImg().then(response => response.forEach(responseEntity => showImg(responseEntity))); //TODO: mb create custom response iterator
 };
+
+//TODO:
+Array.from(document.getElementsByTagName('image-card')).forEach(element => element.addEventListener('mouseover', function (event) {
+    event.target.style = `
+        background-color: green;
+    `
+}))
