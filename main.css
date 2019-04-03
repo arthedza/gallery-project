@@ -4,16 +4,39 @@ body {
 
 .logo_container {
     display: inline-block;
+    position: relative;
+    left: 20%;
+    font: 2em sans-serif;
+    color: #373F51;
     /* justify-content: flex-start; */
 }
 
 .topbar_wrapper {
+    position: fixed;
+    /**/
     display: flex;
+    align-items: center;
     justify-content: flex-end;
     width: 100%;
     height: 4em;
     background-color: #58A4B0;
     margin: 0 auto;
+}
+
+
+.inputs_container {
+    display: flex;
+    position: relative;
+    left: 10%;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.login_inputs {
+    height: 2em;
+    margin: 0 2em;
+
+
 }
 
 .menu {
@@ -22,12 +45,12 @@ body {
 
 }
 
-/* .menu_element {
-
-
-    width: 40px;
-    height: 40px;
-} */
+.menu_element {
+    /* display: none; */
+    align-self: flex-start;
+    position: relative;
+    right: 60%;
+}
 
 #image_selector {
     display: none;
@@ -36,22 +59,37 @@ body {
 
 
 
-label {
-    /* background: url(img/plus-circle.svg); */
+#label {
+    display: none;
 }
 
 .main-container {
     /* position: relative; */
+    /* top: 50%; */
+    /* margin: 100px; */
     width: 100%;
     display: flex;
+    /* margin: 0 auto; */
+}
+
+.content_wrapper {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* flex-direction: row-reverse; */
+    margin: 0 auto;
 }
 
 .placeholder {
-    display: inline-block;
+    /* display: inline-flex; */
     /* width: 50%; */
+
+    position: fixed;
+    top: 50%;
     left: 50%;
-    justify-content: center;
-    align-items: center;
+    /* align-content: center; */
+    /* right: 50%; */
+    /* justify-content: center; */
+    /* align-items: center; */
     font-size: 6rem;
     color: #76787C;
 }

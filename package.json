@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -p",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch --mode=development"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/arthedza/gallery-project/issues"
   },
-  "homepage": "https://github.com/arthedza/gallery-project#readme"
+  "homepage": "https://github.com/arthedza/gallery-project#readme",
+  "dependencies": {
+    "exif-js": "^2.3.0",
+    "js-sha1": "^0.6.0"
+  }
 }
